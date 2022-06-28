@@ -1,5 +1,5 @@
 # AlgoSharp
-This is a collection of algorithms made to be useable for future projects and a catalyst for me to improve my knowledge of data structures and algorithms.
+This is a collection of algorithms made to be useable for future projects and a catalyst for me to improve my knowledge of data structures and algorithms as a whole.
 
 ### Self Imposed Rules of this Project
 

@@ -35,7 +35,7 @@ public static class MergeSort
         return Merge(left, right);
     }
 
-    private static IEnumerable<int> Merge(ICollection<int> left, ICollection<int> right)
+    private static IEnumerable<int> Merge(IList<int> left, IList<int> right)
     {
 
         var combined = new List<int>();

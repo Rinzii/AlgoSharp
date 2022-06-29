@@ -73,6 +73,7 @@ public static class MergeSort
         return combined;
     }
     
+// TODO: Update this function to match the synchronous version
     public static async Task<IEnumerable<int>> ParallelSort(IList<int> unsortedList)
     {
         // Base case for algorithm

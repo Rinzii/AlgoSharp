@@ -7,7 +7,7 @@ public static class MergeSort
     /// </summary>
     /// <param name="unsortedList"></param>
     /// <returns></returns>
-    public static IEnumerable<int> Sort(IList<int> unsortedList)
+    public static List<int> Sort(IList<int> unsortedList)
     {
         // Base case for algorithm
         if (unsortedList.Count <= 1)
@@ -29,8 +29,8 @@ public static class MergeSort
             }
         }
 
-        left = Sort(left) as List<int>;
-        right = Sort(right) as List<int>;
+        left = Sort(left);
+        right = Sort(right);
 
         return Merge(left, right);
     }
@@ -39,6 +39,8 @@ public static class MergeSort
     {
 
         var combined = new List<int>();
+        var leftIndex = 0;
+        var rightIndex = 0;
 
         // Keep looping till we have no more elements remaining
         while (left.Any() || right.Any())
@@ -48,24 +50,24 @@ public static class MergeSort
                 // Compare our two lists
                 if (left.First() <= right.First())  
                 {
-                    combined.Add(left.First());
-                    left.Remove(left.First());      
+                    combined.Add(left[leftIndex]);
+                    leftIndex++;
                 }
                 else
                 {
-                    combined.Add(right.First());
-                    right.Remove(right.First());
+                    combined.Add(right[rightIndex);
+                    rightIndex++;
                 }
             }
             else if (left.Any()) // If we only have a left element
             {
-                combined.Add(left.First());
-                left.Remove(left.First());
+                combined.Add(left[leftIndex]);
+                leftIndex++;
             }
             else if (right.Any()) // if we only have a right element
             {
-                combined.Add(right.First());
-                right.Remove(right.First());
+                combined.Add(right[rightIndex]);
+                rightIndex++;
             }
         }
         return combined;

@@ -12,7 +12,7 @@ public class MergeSortTests
         List<int>? mergeSortedList = MergeSort.Sort(unsortedList) as List<int>;
         var parallelMergeSortedList = MergeSort.ParallelSort(unsortedList);
         
-        Assert.NotEmpty(new[] {parallelMergeSortedList});
+        //Assert.NotEmpty(new[] {parallelMergeSortedList});
 
         
     }

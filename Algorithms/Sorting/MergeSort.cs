@@ -74,7 +74,7 @@ public static class MergeSort
     }
     
 // TODO: Update this function to match the synchronous version
-    public static async Task<IEnumerable<int>> ParallelSort(IList<int> unsortedList)
+    public static async Task<IEnumerable<int>> SortAsync(IList<int> unsortedList)
     {
         // Base case for algorithm
         if (unsortedList.Count <= 1)
@@ -96,13 +96,13 @@ public static class MergeSort
             }
         }
 
-        left = await ParallelSort(left) as List<int>;;
-        right = await ParallelSort(right) as List<int>;;
+        left = await SortAsync(left) as List<int>;;
+        right = await SortAsync(right) as List<int>;;
 
-        return await ParallelMerge(left, right);
+        return await MergeAsync(left, right);
     }
 
-    private static Task<List<int>> ParallelMerge(ICollection<int> left, ICollection<int> right)
+    private static Task<List<int>> MergeAsync(ICollection<int> left, ICollection<int> right)
     {
 
         var combined = new List<int>();

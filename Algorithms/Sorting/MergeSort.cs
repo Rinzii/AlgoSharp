@@ -55,7 +55,7 @@ public static class MergeSort
                 }
                 else
                 {
-                    combined.Add(right[rightIndex);
+                    combined.Add(right[rightIndex]);
                     rightIndex++;
                 }
             }

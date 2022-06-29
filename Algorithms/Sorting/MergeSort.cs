@@ -7,7 +7,7 @@ public static class MergeSort
     /// </summary>
     /// <param name="unsortedList"></param>
     /// <returns></returns>
-    public static List<int> Sort(IList<int> unsortedList)
+    public static List<int> Sort(List<int> unsortedList)
     {
         // Base case for algorithm
         if (unsortedList.Count <= 1)
@@ -35,7 +35,7 @@ public static class MergeSort
         return Merge(left, right);
     }
 
-    private static IEnumerable<int> Merge(List<int> left, List<int> right)
+    private static List<int> Merge(List<int> left, List<int> right)
     {
 
         var combined = new List<int>();
